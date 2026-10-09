@@ -1,114 +1,54 @@
-📦 Inventory Management System
-
-🖥️ Sistem Informasi Manajemen Persediaan Barang
-
-Mata Kuliah: Pemrograman Web
-Materi: Relational Database + Advanced PHP
-Mini Project: Inventory Management System
-
----
+Product Information System
 
 📌 Deskripsi Proyek
 
-Inventory Management System merupakan aplikasi berbasis web yang digunakan untuk mengelola persediaan barang secara terstruktur. Sistem ini membantu pengguna mencatat data produk, kategori, supplier, serta transaksi barang masuk dan barang keluar.
+Product Information System merupakan proyek berbasis web yang dirancang untuk menampilkan dan mengelola informasi produk secara terstruktur. Proyek ini dibuat sebagai bagian dari tugas praktik pengembangan web.
 
-Aplikasi ini dirancang untuk menjaga keakuratan stok, mempermudah pencarian barang, dan menyajikan informasi persediaan yang dibutuhkan dalam kegiatan operasional.
+🎯 Tujuan
 
-Fitur Utama
-
-- Mengelola data kategori, produk, dan supplier.
-- Mencatat transaksi barang masuk dan barang keluar.
-- Memantau jumlah stok barang secara otomatis.
-- Menampilkan produk dengan stok rendah.
-- Mencari dan menyaring data produk.
-- Menampilkan laporan persediaan barang.
-- Menyediakan login dan pembagian hak akses pengguna.
-- Menjaga keamanan dan konsistensi data.
-
----
+- Mempermudah pengelolaan informasi produk.
+- Menampilkan data produk dengan lebih teratur.
+- Mempermudah pengguna dalam melihat informasi produk.
+- Menerapkan dasar pengembangan aplikasi web menggunakan PHP.
 
 ⚙️ Teknologi yang Digunakan
 
-- HTML & CSS — Membuat struktur dan tampilan halaman web.
 - PHP — Mengolah data dan menjalankan logika aplikasi.
-- MySQL — Menyimpan dan mengelola database.
-- PDO — Menghubungkan PHP dengan database menggunakan prepared statement.
-- XAMPP — Menjalankan server lokal selama pengembangan.
+- HTML — Membuat struktur halaman web.
+- CSS — Mengatur tampilan halaman web.
 
----
+📂 Struktur File
 
-🗄️ Struktur Database
+File| Fungsi
+"index.php"| Halaman utama aplikasi.
+"products.php"| Mengelola dan menampilkan informasi produk.
+"functions.php"| Menyimpan fungsi-fungsi pendukung aplikasi.
 
-Database dirancang menggunakan relasi antar-tabel untuk menjaga konsistensi data.
+✨ Fitur Proyek
 
-Nama Tabel| Fungsi
-"users"| Menyimpan data pengguna dan hak akses.
-"categories"| Menyimpan kategori produk.
-"products"| Menyimpan informasi produk dan stok.
-"suppliers"| Menyimpan data pemasok barang.
-"product_suppliers"| Menghubungkan produk dengan supplier.
-"stock_movements"| Mencatat riwayat barang masuk dan keluar.
-
-Relasi Database
-
-- One-to-One: Pengguna dengan profil pengguna.
-- One-to-Many: Kategori dengan produk.
-- Many-to-Many: Produk dengan supplier.
-
-Relasi tersebut menggunakan foreign key untuk membantu menjaga integritas data.
-
----
-
-📊 Aturan Pengelolaan Stok
-
-Sistem menerapkan aturan bisnis agar persediaan tetap akurat.
-
-- Barang masuk akan menambah jumlah stok.
-- Barang keluar akan mengurangi jumlah stok.
-- Jumlah barang keluar tidak boleh melebihi stok tersedia.
-- Stok tidak boleh bernilai negatif.
-- SKU setiap produk harus unik.
-- Harga dan jumlah barang tidak boleh negatif.
-- Riwayat transaksi harus tersimpan dengan benar.
-
-Rumus perhitungan stok:
-
-Stok akhir = Stok awal + Barang Masuk − Barang Keluar
-
----
-
-🔐 Keamanan Sistem
-
-Untuk menjaga keamanan aplikasi, sistem menerapkan beberapa mekanisme berikut:
-
-- Login dan logout pengguna.
-- Password disimpan menggunakan hashing.
-- Pembagian hak akses antara admin dan staff.
-- Prepared statement untuk mengurangi risiko SQL Injection.
-- Validasi input pada sisi server.
-- Output encoding untuk mengurangi risiko Cross-Site Scripting (XSS).
-- Database transaction untuk menjaga konsistensi perubahan stok dan riwayat transaksi.
-
----
+- Menampilkan informasi produk.
+- Mengelola data produk.
+- Menggunakan fungsi PHP untuk membantu pengolahan data.
+- Menyajikan informasi produk melalui halaman web.
 
 🚀 Cara Menjalankan Proyek
 
-1. Instal dan buka XAMPP.
-2. Aktifkan Apache dan MySQL.
-3. Buat database melalui phpMyAdmin.
-4. Import file struktur database "schema.sql".
-5. Letakkan folder proyek di direktori "C:\xampp\htdocs\inventory-app".
-6. Sesuaikan konfigurasi koneksi database pada file PHP.
-7. Buka browser dan akses "http://localhost/inventory-app/".
+1. Instal aplikasi server lokal seperti XAMPP.
 
-Catatan: Langkah ini merupakan panduan menjalankan proyek di lingkungan lokal. Pastikan source code dan file "schema.sql" sudah tersedia.
+2. Simpan folder proyek di direktori "htdocs".
+
+3. Jalankan Apache melalui XAMPP.
+
+4. Buka browser dan akses:
+   
+   "http://localhost/nama-folder-proyek/"
+
+5. Sesuaikan "nama-folder-proyek" dengan nama folder proyek yang digunakan.
+
+📝 Kesimpulan
+
+Product Information System merupakan proyek pembelajaran yang membantu mahasiswa memahami dasar pembuatan aplikasi web menggunakan PHP, pengelolaan informasi produk, dan penggunaan fungsi untuk menyusun kode program agar lebih terstruktur.
 
 ---
 
-🎯 Tujuan Proyek
-
-Proyek ini bertujuan menerapkan konsep database relasional dan PHP tingkat lanjut dalam membangun sistem pengelolaan persediaan barang. Melalui proyek ini, mahasiswa dapat memahami relasi database, operasi SQL, autentikasi, keamanan aplikasi, serta penerapan business logic pada proses transaksi.
-
----
-
-Dibuat untuk memenuhi tugas praktik Pemrograman Web.
+Proyek ini dibuat untuk memenuhi tugas praktik Pemrograman Web.
